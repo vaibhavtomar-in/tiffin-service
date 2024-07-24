@@ -1,0 +1,25 @@
+body{
+    background-image: url(./bg.png);
+    background-size:cover;
+}
+.container{
+    display: flex;
+}
+
+.col2{
+    padding: 1em;
+    flex-grow: 1;
+}
+.buttons{
+    padding-top: 1em;
+    display: flex;
+    gap: 1em;
+}
+form{
+    padding: 1em;
+    margin-top: 15%;
+    background-color: #FF3131;
+}
+.button{
+    border : none
+}
