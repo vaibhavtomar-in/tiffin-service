@@ -23,3 +23,7 @@ form{
 .button{
     border : none
 }
+.button a{
+    text-decoration: none;
+    color: black;
+}
