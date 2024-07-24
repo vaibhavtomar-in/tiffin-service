@@ -1,8 +1,10 @@
 .center{
     text-align: left;
     font-size: 1.5em;
-    color: #FF3131;
+    color: #ffffff;
+    padding-top: 0.075em;
     padding-bottom: 0.075em;
+    background-color: #FF3131;
 }
 .container{
     display: flex;
@@ -20,4 +22,24 @@ img{
 }
 .modal{
     background-color: rgba(255, 49, 49,0.5);
+}
+body{
+    background-image: url(./bg.png);
+    background-size: cover;
+    /* background-repeat: no-repeat ; */
+}
+.navbar-brand{
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-self: left;
+
+}
+nav{
+    background-color: #FF3131;
+}
+@media only screen and (max-width: 768px) {
+    .carousel-item img{
+        width: 100%;
+    }
 }

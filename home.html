@@ -24,6 +24,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+    <img src = "./nav-logo.svg" class="navbar-brand" href="#"><img>
+    <button 
+    class="navbar-brand navbar-toggler p-3" 
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="true"
+    aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="...">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
     <div class="container">
         <div class="row food-logo center">
             <i class="fa-solid fa-bowl-food center"> Food items </i>  
@@ -34,8 +60,7 @@
                   <div class="carousel-item active">
                     <img 
                     data-bs-toggle="modal"
-                    data-bs-target="#shahipaneer"
-                    src="./food/1.jpg" class="d-block center" alt="...">
+                    data-bs-target="#shahipaneer" src="./food/1.jpg" class="d-block center" alt="...">
                   </div>
                   <div class="carousel-item">
                     <img 
