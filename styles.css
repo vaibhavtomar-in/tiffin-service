@@ -4,6 +4,7 @@ body{
 }
 .container{
     display: flex;
+    flex-direction: column;
 }
 
 .col2{
@@ -17,7 +18,7 @@ body{
 }
 form{
     padding: 1em;
-    margin-top: 15%;
+    margin-top: 5%;
     background-color: #FF3131;
 }
 .button{
@@ -26,4 +27,14 @@ form{
 .button a{
     text-decoration: none;
     color: black;
+}
+img{
+    display: flex;
+    height:10em;
+    margin-left: 40%;
+}
+@media (max-width: 768px){
+    img{
+        margin-left: 27.5%;
+    }
 }
