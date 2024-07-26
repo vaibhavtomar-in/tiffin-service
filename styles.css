@@ -1,7 +1,7 @@
-/* body{
+body{
     background-image: url(./bg.png);
     background-size:cover;
-} */
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -33,6 +33,9 @@ svg{
     height:10em;
     margin-left: 40%;
     margin-top: 20px;
+    background-color: rgb(255, 255, 255,0.8);
+    padding: 1em;
+    border-radius: 2em;
 }
 /* @media (max-width: 768px){
     svg{
