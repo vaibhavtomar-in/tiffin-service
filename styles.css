@@ -34,8 +34,8 @@ svg{
     margin-left: 40%;
     margin-top: 20px;
 }
-@media (max-width: 768px){
+/* @media (max-width: 768px){
     svg{
         margin-left: 27.5%;
     }
-}
+} */
