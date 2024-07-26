@@ -28,13 +28,13 @@ form{
     text-decoration: none;
     color: black;
 }
-img{
+svg{
     display: flex;
     height:10em;
     margin-left: 40%;
 }
-@media (max-width: 768px){
-    img{
+/* @media (max-width: 768px){
+    svg{
         margin-left: 27.5%;
     }
-}
+} */
