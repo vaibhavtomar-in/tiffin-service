@@ -1,0 +1,20 @@
+svg{
+    width: 3em;
+}
+img{
+    width:20rem
+}
+.alert{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: red;
+    color: white;
+}
+.d-none{
+    display: none;
+}
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
