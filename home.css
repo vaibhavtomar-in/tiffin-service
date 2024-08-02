@@ -37,6 +37,7 @@ a{
 @media only screen and (max-width: 768px){
     .provider-info{
         text-align: center;
+        font-size: 1rem;
     }
     :hover.carousel-control-next{
         background-color: #FF3131;
