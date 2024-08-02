@@ -31,6 +31,9 @@ a{
 :hover.price{
     color: blanchedalmond;
 }
+.provider-info{
+    font-size: 1.3rem;
+}
 @media only screen and (max-width: 768px){
     .provider-info{
         text-align: center;
@@ -47,5 +50,8 @@ a{
     }
     a{
         color: #000000;
+    }
+    img{
+        width: 50%;
     }
 }
