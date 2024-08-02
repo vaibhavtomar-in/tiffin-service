@@ -1,48 +1,31 @@
-.center{
-    text-align: left;
-    font-size: 1.5em;
-    color: #ffffff;
-    padding-top: 0.075em;
-    padding-bottom: 0.075em;
+.food-logo{
     background-color: #FF3131;
+    padding: 0.25em;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    padding-top: 1em;
-    gap:1em;
+.food-logo {
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    text-shadow: #000000;
 }
-.caroussel{
-    background-color: #FF3131;
+.img{
+    object-fit: contain;
 }
-img{
-    margin: auto;
-    align-self: center;
-    width: 50%;
-}
-.modal{
-    background-color: rgba(255, 49, 49,0.5);
-}
-body{
-    background-image: url(./bg.png);
-    background-size: cover;
-    /* background-repeat: no-repeat ; */
-}
-.navbar-brand{
-    display: flex;
-    height: 60px;
-    width: 60px;
-    justify-self: left;
 
-}
-nav{
+:hover.carousel-control-next{
     background-color: #FF3131;
 }
-svg{
-    width: 3em;
+:hover.carousel-control-prev{
+    background-color: #FF3131;
 }
-@media only screen and (max-width: 768px) {
-    .carousel-item img{
-        width: 100%;
+
+
+
+:hover.price{
+    color: blanchedalmond;
+}
+@media only screen and (max-width: 768px){
+    .provider-info{
+        text-align: center;
     }
 }
