@@ -19,7 +19,7 @@ body{
 form{
     padding: 1em;
     margin-top: 5%;
-    background-color: #FF3131;
+    background-color: #fc4c4c;
     color: white;
 }
 .button{
@@ -27,7 +27,7 @@ form{
 }
 .button a{
     text-decoration: none;
-    color: #FF3131;
+    color: #fc4c4c;
 }
 svg{
     display: flex;
