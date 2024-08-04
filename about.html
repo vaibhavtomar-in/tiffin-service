@@ -64,13 +64,13 @@
           </ul>
         </div>
       </nav>
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid">
+        <div class="row p-5">
             <div class="col-12 col-lg-4 text-center p-3">
-                <div class = " redbg text-light"><img class="object-fit-cover" src="./aboutus.webp"></div>
+                <div class = "redbg text-light"><img class="object-fit-cover" src="./aboutus.webp"></div>
             </div>
             <div class  = "col-12 col-lg-8 p-3">
-            <div class="col-12  redbg p-3">
+            <div class="redbg p-3">
                 <div class="row p-2 text-light"><h1>About Us</h1></div>
                 <div class="row"><p class = "p-3 text-light">
                     Introducing "Tiffin Master," a user-friendly app that aggregates a vast catalog of tiffin delivery providers, making it easier for users to access home-cooked meals. The app features a diverse range of tiffin services, showcasing menus, pricing, and customer reviews to help users find the perfect meal plan for their needs. Whether you crave traditional dishes or healthier options, Tiffin Master ensures that you have a wide selection at your fingertips, with seamless ordering and reliable delivery tracking for a hassle-free dining experience.
@@ -90,10 +90,10 @@
                 </address>
                 <main id="main">
                   <button id="clickme">Find Us!</button>
+                  <button id="googlemap">Get Route</button>
                   <div id="errorArea" class="alert d-none"></div>
                   <div id="map"></div>
                   </main>
-                  <a href="https://www.google.com/maps?q=12.93516970139648,77.60661184787752" target="_blank">Open in Google Maps</a>
                 </div>
             </div>
             </div>
@@ -118,6 +118,36 @@
                         .openPopup();
 
                     document.getElementById("map").classList.remove("d-none");
+
+                },error=>{
+                    let msg="";
+                    switch(error.code){
+                        case error.PERMISSION_DENIED:
+                            msg="User Denied Permission";
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            msg="Can't Locate User's Position";
+                            break;
+                        case error.TIMEOUT:
+                            msg="Time out";
+                            break;
+                    }
+                 let errorArea=document.getElementById("errorArea");
+                 errorArea.innerHTML=msg;
+                 errorArea.classList.remove("d-none");
+                })
+
+            }else{
+                console.log("Update your browser to get Geolocation Object");
+            }
+
+        })
+        let getloc1=document.getElementById("googlemap");
+        getloc1.addEventListener('click',event=>{
+              if('geolocation' in navigator){
+              navigator.geolocation.getCurrentPosition(pos=>{
+                  window.open("https://www.google.com/maps/dir/"+pos.coords.latitude+","+pos.coords.longitude+"/28.710353824707465,77.1640406020339");
+                  // Display the map   //
 
                 },error=>{
                     let msg="";

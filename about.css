@@ -1,8 +1,9 @@
 svg{
     width: 3em;
 }
+
 img{
-    width:20rem
+    width:30em
 }
 .alert{
     margin-top: 1em;
@@ -21,3 +22,9 @@ img{
 .redbg{
     background-color: #fc4c4c;
 }
+@media only screen and (max-width: 768px){
+    img{
+        width:20em
+    }
+}
+    
