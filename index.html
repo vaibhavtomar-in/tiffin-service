@@ -38,19 +38,41 @@
           </svg>
         </div>
         <div class="col2 col-md-5">
-            <form class="rounded-5">
-              <div><i class="fa-solid fa-users"></i></div>  
-              <label for="artist" class="col-form-label">USERNAME</label>
-              <input type="text" class="form-control" id="recipient-name" />
-              <label for="artist" class="col-form-label">PASSWORD</label>
-              <input type="text" class="form-control" id="recipient-name" />
-              <div class="buttons">
-                <button class="login button rounded-3"><a href = "home.html">LOGIN</a></button>
-                <button class="signin button rounded-3"><a href = "home.html">SIGN IN</a></button>
-              </div>            
-            </form>
+          <form class="rounded-5" id="loginForm">
+            <div><i class="fa-solid fa-users"></i></div>  
+            <label for="username" class="col-form-label">USERNAME</label>
+            <input type="text" class="form-control" id="username" />
+            <label for="password" class="col-form-label">PASSWORD</label>
+            <input type="password" class="form-control" id="password" />
+            <div class="buttons">
+              <button type="submit" class="login button rounded-3">LOGIN</button>
+              <button type="submit" class="signin button rounded-3">SIGN IN</button>
+            </div>            
+          </form>
         </div>
         
     </div>
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+      
+        var username = document.getElementById('username').value.trim();
+        var password = document.getElementById('password').value.trim();
+      
+        if (username === '') {
+          alert('Please enter your username.');
+          return;
+        }
+      
+        if (password === '') {
+          alert('Please enter your password.');
+          return;
+        }
+      
+        // If validation passes, you can submit the form or redirect as needed
+        window.location.href = 'home.html';
+      });
+      </script>
+      
 </body>
 </html>
