@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" attributeFormDefault="unqualified" 
+targetNamespace="http://www.example.com/provider" xmlns:tiffin="http://www.example.com/provider" >
+
+    <!-- Define a pattern for phone numbers -->
+    <xs:simpleType name="phoneType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3}-\d{3}-\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Define a pattern for email addresses -->
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Define a restriction for price -->
+    <xs:simpleType name="priceType">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:maxExclusive value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="itemType">
+        <xs:sequence>
+            <xs:element name="itemName" type="xs:string"/>
+            <xs:element name="itemDiet" type="xs:string"/>
+            <xs:element name="itemPrice" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="menuType">
+        <xs:sequence>
+            <xs:element name="menuName"/>
+            <xs:element name="description"/>
+            <xs:element name="item" type="tiffin:itemType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tiffinProvidersType">
+            <xs:sequence>
+                <xs:element name="provider" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="name" type="xs:string"/>
+                        <xs:element name="phone" type="tiffin:phoneType"/>
+                        <xs:element name="email" type="tiffin:emailType"/>
+                        <xs:element name="address" type="xs:string"/>
+                        <xs:element name="price" type="tiffin:priceType"/>
+                        <xs:element name="rating" type="xs:decimal"/>
+                        <xs:element name="longitude" type="xs:decimal"/>
+                        <xs:element name="latitude" type="xs:decimal"/>
+                        <xs:element name="menu" type="tiffin:menuType"/>
+                    </xs:sequence>
+                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            </xs:sequence>
+    </xs:complexType>
+    <xs:element name="tiffinProviders" type="tiffin:tiffinProvidersType"/>
+</xs:schema>

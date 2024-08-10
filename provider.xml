@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tiffin:tiffinProviders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tiffin="http://www.example.com/provider" xsi:schemaLocation="http://www.example.com/provider provider.xsd">
+
+<tiffin:provider id="p1">
+    <tiffin:name>Healthy Tiffin Service</tiffin:name>
+    <tiffin:phone>123-456-7890</tiffin:phone>
+    <tiffin:email>contact@healthytiffin.com</tiffin:email>
+    <tiffin:address>123 Tiffin Street, Food City</tiffin:address>
+    <tiffin:price>15.99</tiffin:price>
+    <tiffin:rating>4.5</tiffin:rating>
+    <tiffin:longitude>45.123456</tiffin:longitude>
+    <tiffin:latitude>-75.123456</tiffin:latitude>
+    <tiffin:menu>
+        <tiffin:menuName>Vegetarian Special</tiffin:menuName>
+        <tiffin:description>A healthy vegetarian meal plan</tiffin:description>
+        <tiffin:item>
+            <tiffin:itemName>Paneer Butter Masala</tiffin:itemName>
+            <tiffin:itemDiet>Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>8.99</tiffin:itemPrice>
+        </tiffin:item>
+        <tiffin:item>
+            <tiffin:itemName>Mixed Veg Curry</tiffin:itemName>
+            <tiffin:itemDiet>Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>7.99</tiffin:itemPrice>
+        </tiffin:item>
+    </tiffin:menu>
+</tiffin:provider>
+
+<tiffin:provider id="p2">
+    <tiffin:name>Quick Bites Tiffin</tiffin:name>
+    <tiffin:phone>987-654-3210</tiffin:phone>
+    <tiffin:email>info@quickbitestiffin.com</tiffin:email>
+    <tiffin:address>456 Snack Lane, Fastfood Town</tiffin:address>
+    <tiffin:price>12.50</tiffin:price>
+    <tiffin:rating>4.2</tiffin:rating>
+    <tiffin:longitude>46.654321</tiffin:longitude>
+    <tiffin:latitude>-76.654321</tiffin:latitude>
+    <tiffin:menu>
+        <tiffin:menuName>Non-Veg Combo</tiffin:menuName>
+        <tiffin:description>Delicious non-vegetarian dishes</tiffin:description>
+        <tiffin:item>
+            <tiffin:itemName>Chicken Curry</tiffin:itemName>
+            <tiffin:itemDiet>Non-Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>9.99</tiffin:itemPrice>
+        </tiffin:item>
+        <tiffin:item>
+            <tiffin:itemName>Fish Fry</tiffin:itemName>
+            <tiffin:itemDiet>Non-Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>10.50</tiffin:itemPrice>
+        </tiffin:item>
+    </tiffin:menu>
+</tiffin:provider>
+
+<tiffin:provider id="p3">
+    <tiffin:name>Delightful Tiffin</tiffin:name>
+    <tiffin:phone>234-567-8901</tiffin:phone>
+    <tiffin:email>support@delightfultiffin.com</tiffin:email>
+    <tiffin:address>789 Gourmet Avenue, Cuisine City</tiffin:address>
+    <tiffin:price>18.00</tiffin:price>
+    <tiffin:rating>4.7</tiffin:rating>
+    <tiffin:longitude>47.234567</tiffin:longitude>
+    <tiffin:latitude>-77.234567</tiffin:latitude>
+    <tiffin:menu>
+        <tiffin:menuName>Gourmet Feast</tiffin:menuName>
+        <tiffin:description>Exquisite dishes for a gourmet experience</tiffin:description>
+        <tiffin:item>
+            <tiffin:itemName>Grilled Salmon</tiffin:itemName>
+            <tiffin:itemDiet>Non-Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>14.99</tiffin:itemPrice>
+        </tiffin:item>
+        <tiffin:item>
+            <tiffin:itemName>Stuffed Bell Peppers</tiffin:itemName>
+            <tiffin:itemDiet>Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>9.99</tiffin:itemPrice>
+        </tiffin:item>
+        <tiffin:item>
+            <tiffin:itemName>Quinoa Salad</tiffin:itemName>
+            <tiffin:itemDiet>Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>8.50</tiffin:itemPrice>
+        </tiffin:item>
+    </tiffin:menu>
+</tiffin:provider>
+
+<tiffin:provider id="p4">
+    <tiffin:name>HomeStyle Tiffin</tiffin:name>
+    <tiffin:phone>345-678-9012</tiffin:phone>
+    <tiffin:email>hello@homestyletiffin.com</tiffin:email>
+    <tiffin:address>101 Homely Street, Comfort Town</tiffin:address>
+    <tiffin:price>10.99</tiffin:price>
+    <tiffin:rating>4.3</tiffin:rating>
+    <tiffin:longitude>48.345678</tiffin:longitude>
+    <tiffin:latitude>-78.345678</tiffin:latitude>
+    <tiffin:menu>
+        <tiffin:menuName>Comfort Classics</tiffin:menuName>
+        <tiffin:description>Homestyle dishes for a cozy meal</tiffin:description>
+        <tiffin:item>
+            <tiffin:itemName>Dal Tadka</tiffin:itemName>
+            <tiffin:itemDiet>Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>6.99</tiffin:itemPrice>
+        </tiffin:item>
+        <tiffin:item>
+            <tiffin:itemName>Aloo Gobi</tiffin:itemName>
+            <tiffin:itemDiet>Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>7.50</tiffin:itemPrice>
+        </tiffin:item>
+        <tiffin:item>
+            <tiffin:itemName>Butter Chicken</tiffin:itemName>
+            <tiffin:itemDiet>Non-Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>9.50</tiffin:itemPrice>
+        </tiffin:item>
+    </tiffin:menu>
+</tiffin:provider>
+
+<tiffin:provider id="p5">
+    <tiffin:name>Exotic Eats Tiffin</tiffin:name>
+    <tiffin:phone>456-789-0123</tiffin:phone>
+    <tiffin:email>contact@exoticeatstiffin.com</tiffin:email>
+    <tiffin:address>202 Exotic Drive, Adventure City</tiffin:address>
+    <tiffin:price>20.00</tiffin:price>
+    <tiffin:rating>4.8</tiffin:rating>
+    <tiffin:longitude>49.456789</tiffin:longitude>
+    <tiffin:latitude>-79.456789</tiffin:latitude>
+    <tiffin:menu>
+        <tiffin:menuName>World Cuisine</tiffin:menuName>
+        <tiffin:description>A diverse selection of dishes from around the globe</tiffin:description>
+        <tiffin:item>
+            <tiffin:itemName>Sushi Platter</tiffin:itemName>
+            <tiffin:itemDiet>Non-Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>18.00</tiffin:itemPrice>
+        </tiffin:item>
+        <tiffin:item>
+            <tiffin:itemName>Vegetable Stir-Fry</tiffin:itemName>
+            <tiffin:itemDiet>Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>12.50</tiffin:itemPrice>
+        </tiffin:item>
+        <tiffin:item>
+            <tiffin:itemName>Tiramisu</tiffin:itemName>
+            <tiffin:itemDiet>Vegetarian</tiffin:itemDiet>
+            <tiffin:itemPrice>6.99</tiffin:itemPrice>
+        </tiffin:item>
+    </tiffin:menu>
+</tiffin:provider>
+
+</tiffin:tiffinProviders>
