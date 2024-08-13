@@ -55,16 +55,16 @@
               <a class="nav-link" href="index.html">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Contact Us</a>
+              <a class="nav-link" href="about.html">About Us</a>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="row-12 wrapper">
+      <div class="wrapper">
         <div class="row-12 food-logo" >
         <h1><i class="fa-solid fa-utensils"></i> Tiffin Providers</h1>
         </div>
-        <div class = "carousel-outer">
+        <div class = "carousel-outer row-12">
         <div class = "col-12 carousel p-3">
           <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -208,6 +208,47 @@
               </div>
           </div>
       </div>
+      </div>
+      
+      <div class="table-container row-12">
+        <h2>Tiffin Providers' Details</h2>
+        <div class="p-3">
+        <table id="providersTable" class = "table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Price</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        </table>
+      </div>
+      </div>
+      <!-- <details class="row-12 p-5">
+        <summary><h2 class = "col-12">Tiffin Providers' Details</h2></summary>
+        <table id="providersTable" class = "table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Price</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+          Data will be populated here -->
+          </tbody>
+          </table>
+      </details>
       </div>
       <div class="modal" id="shahipaneer">
         <div class="modal-dialog">
@@ -364,5 +405,45 @@
           </div>
         </div>
       </div>
+      <script>
+        // Function to create a table row for each provider
+        function createProviderRow(provider) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${provider.id}</td>
+                <td>${provider.name}</td>
+                <td>${provider.phone}</td>
+                <td>${provider.email}</td>
+                <td>${provider.address}</td>
+                <td>${provider.price}</td>
+                <td>${provider.rating}</td>
+            `;
+            return row;
+        }
+    
+        // Function to display provider data in the table
+        function displayProviders(data) {
+            const tableBody = document.querySelector('#providersTable tbody');
+            data.tiffinProviders.provider.forEach(provider => {
+                const row = createProviderRow(provider);
+                tableBody.appendChild(row);
+            });
+        }
+    
+        // XHR request to fetch the JSON data
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://vaibhavtomar-in.github.io/tiffin-service/data.json', true); // Replace 'URL_TO_JSON_DATA' with the actual URL
+        xhr.responseType = 'json';
+    
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                displayProviders(xhr.response);
+            } else {
+                console.error('Failed to load data');
+            }
+        };
+    
+        xhr.send();
+    </script>
 </body>
 </html>

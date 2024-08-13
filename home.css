@@ -38,6 +38,26 @@ a{
 .i{
     font-size: 3rem;
 }
+th{
+    color: #fc4c4c;
+}
+h2{
+    background-color: #fc4c4c;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+.table-container{
+    padding-top: 2em;
+}
+/* 
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+} */
 @media only screen and (max-width: 768px){
     .provider-info{
         text-align: center;
