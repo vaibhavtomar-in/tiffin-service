@@ -1,0 +1,157 @@
+{
+    "tiffinProviders": {
+      "provider": [
+        {
+          "id": "p1",
+          "name": "Healthy Tiffin Service",
+          "phone": "123-456-7890",
+          "email": "contact@healthytiffin.com",
+          "address": "123 Tiffin Street, Food City",
+          "price": 15.99,
+          "rating": 4.5,
+          "longitude": 45.123456,
+          "latitude": -75.123456,
+          "menu": {
+            "menuName": "Vegetarian Special",
+            "description": "A healthy vegetarian meal plan",
+            "item": [
+              {
+                "itemName": "Paneer Butter Masala",
+                "itemDiet": "Vegetarian",
+                "itemPrice": 8.99
+              },
+              {
+                "itemName": "Mixed Veg Curry",
+                "itemDiet": "Vegetarian",
+                "itemPrice": 7.99
+              }
+            ]
+          }
+        },
+        {
+          "id": "p2",
+          "name": "Quick Bites Tiffin",
+          "phone": "987-654-3210",
+          "email": "info@quickbitestiffin.com",
+          "address": "456 Snack Lane, Fastfood Town",
+          "price": 12.5,
+          "rating": 4.2,
+          "longitude": 46.654321,
+          "latitude": -76.654321,
+          "menu": {
+            "menuName": "Non-Veg Combo",
+            "description": "Delicious non-vegetarian dishes",
+            "item": [
+              {
+                "itemName": "Chicken Curry",
+                "itemDiet": "Non-Vegetarian",
+                "itemPrice": 9.99
+              },
+              {
+                "itemName": "Fish Fry",
+                "itemDiet": "Non-Vegetarian",
+                "itemPrice": 10.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "p3",
+          "name": "Delightful Tiffin",
+          "phone": "234-567-8901",
+          "email": "support@delightfultiffin.com",
+          "address": "789 Gourmet Avenue, Cuisine City",
+          "price": 18.0,
+          "rating": 4.7,
+          "longitude": 47.234567,
+          "latitude": -77.234567,
+          "menu": {
+            "menuName": "Gourmet Feast",
+            "description": "Exquisite dishes for a gourmet experience",
+            "item": [
+              {
+                "itemName": "Grilled Salmon",
+                "itemDiet": "Non-Vegetarian",
+                "itemPrice": 14.99
+              },
+              {
+                "itemName": "Stuffed Bell Peppers",
+                "itemDiet": "Vegetarian",
+                "itemPrice": 9.99
+              },
+              {
+                "itemName": "Quinoa Salad",
+                "itemDiet": "Vegetarian",
+                "itemPrice": 8.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "p4",
+          "name": "HomeStyle Tiffin",
+          "phone": "345-678-9012",
+          "email": "hello@homestyletiffin.com",
+          "address": "101 Homely Street, Comfort Town",
+          "price": 10.99,
+          "rating": 4.3,
+          "longitude": 48.345678,
+          "latitude": -78.345678,
+          "menu": {
+            "menuName": "Comfort Classics",
+            "description": "Homestyle dishes for a cozy meal",
+            "item": [
+              {
+                "itemName": "Dal Tadka",
+                "itemDiet": "Vegetarian",
+                "itemPrice": 6.99
+              },
+              {
+                "itemName": "Aloo Gobi",
+                "itemDiet": "Vegetarian",
+                "itemPrice": 7.5
+              },
+              {
+                "itemName": "Butter Chicken",
+                "itemDiet": "Non-Vegetarian",
+                "itemPrice": 9.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "p5",
+          "name": "Exotic Eats Tiffin",
+          "phone": "456-789-0123",
+          "email": "contact@exoticeatstiffin.com",
+          "address": "202 Exotic Drive, Adventure City",
+          "price": 20.0,
+          "rating": 4.8,
+          "longitude": 49.456789,
+          "latitude": -79.456789,
+          "menu": {
+            "menuName": "World Cuisine",
+            "description": "A diverse selection of dishes from around the globe",
+            "item": [
+              {
+                "itemName": "Sushi Platter",
+                "itemDiet": "Non-Vegetarian",
+                "itemPrice": 18.0
+              },
+              {
+                "itemName": "Vegetable Stir-Fry",
+                "itemDiet": "Vegetarian",
+                "itemPrice": 12.5
+              },
+              {
+                "itemName": "Tiramisu",
+                "itemDiet": "Vegetarian",
+                "itemPrice": 6.99
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+  
