@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dt:projects xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dt="http://www.example.com/data" xsi:schemaLocation="http://www.example.com/data data.xsd">
+    <project id="p1">
+        <title>Website Redesign</title>
+        <description>A complete redesign of the company website to improve user experience and responsiveness.</description>
+        <technologies>
+            <technology>HTML</technology>
+            <technology>CSS</technology>
+            <technology>JavaScript</technology>
+            <technology>Bootstrap</technology>
+        </technologies>
+    </project>
+    
+    <project id="p2">
+        <title>Inventory Management System</title>
+        <description>Developed a system to manage inventory levels, orders, and deliveries for a retail business.</description>
+        <technologies>
+            <technology>Java</technology>
+            <technology>Spring Boot</technology>
+            <technology>MySQL</technology>
+        </technologies>
+    </project>
+    
+    <project id="p3">
+        <title>Mobile Banking App</title>
+        <description>Created a mobile banking application for managing accounts, transfers, and payments.</description>
+        <technologies>
+            <technology>React Native</technology>
+            <technology>Node.js</technology>
+            <technology>MongoDB</technology>
+        </technologies>
+    </project>
+</dt:projects>
