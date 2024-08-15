@@ -1,0 +1,28 @@
+
+.login-section{
+    background-image: url(./bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* body{
+    background-color: #fc4c4c;
+} */
+.outer{
+    background-color: #fc4c4c;
+}
+.form-div{
+    height:42em;
+    width:35%;
+}
+@media (max-width: 768px){
+    .form-div{
+        width: 80%;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+}
