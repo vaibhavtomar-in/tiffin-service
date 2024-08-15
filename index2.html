@@ -21,6 +21,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel = "stylesheet" href="style2.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="outer vh-100 d-flex">
@@ -42,17 +43,17 @@
                         </div>
                     </div>
                     <div class="form-content">
-                        <label for="name" class="col-form-label">NAME</label>
+                        <label for="name" class="col-form-label">NAME </label> <span></span>
                         <input type="text" class="form-control" id="name" />
-                        <label for="email" class="col-form-label">EMAIL</label>
+                        <label for="email" class="col-form-label">EMAIL</label> <span></span>
                         <input type="text" class="form-control" id="email" />
-                        <label for="username" class="col-form-label">USERNAME</label>
+                        <label for="username" class="col-form-label">USERNAME</label> <span></span>
                         <input type="text" class="form-control" id="username" />
-                        <label for="password" class="col-form-label">PASSWORD</label>
+                        <label for="password" class="col-form-label">PASSWORD</label> <span></span>
                         <input type="password" class="form-control" id="password" />
-                        <label for="password" class="col-form-label">RE-ENTER PASSWORD</label>
+                        <label for="password" class="col-form-label">RE-ENTER PASSWORD</label> <span></span>
                         <input type="password" class="form-control" id="re-password" />
-                        <label for="birthday" class="col-form-label">Birthday:</label>
+                        <label for="birthday" class="col-form-label">Birthday:</label> <span></span>
                         <input type="text" class="form-control" id="birthday" name="birthday" >
                         <div class="buttons py-3">
                             <button type="submit" class="login button rounded-3">LOGIN</button>
@@ -63,5 +64,128 @@
             </div>
         </section>
     </div>
+    <script>
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let rePassword = document.getElementById("re-password");
+        let birthday = document.getElementById("birthday");
+        const nameRegex = /^[a-zA-Z\s'-]+$/;
+        const emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}$/;
+        const usernameRegex = /^[a-zA-Z0-9.-_]+$/;
+        const passwordRegex = /^(?=.*[A-Z])(?=.*\d).+$/;
+        var birthdayRegex = /^\d{4}-(\d{2}|\d{1})-(\d{2}|\d{1})$/;
+        // console.log(name.previousElementSibling.innerText);
+        name.addEventListener('input', validateName);
+        email.addEventListener('input', validateEmail);
+        username.addEventListener('input', validateUsername);
+        password.addEventListener('input', validatePassword);
+        rePassword.addEventListener('input', validateRepassword);
+        birthday.addEventListener('input', validateBirthday);
+        function validateName(){
+            if (nameRegex.test(name.value)){
+                name.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
+                name.previousElementSibling.style.color = "green";
+                name.previousElementSibling.previousElementSibling.style.color = "green"
+            }
+            else{
+                name.previousElementSibling.innerText = "invalid name";
+                name.previousElementSibling.style.color = "red";
+            }
+        }
+        function validateEmail(){
+            if (emailRegex.test(email.value)){
+                email.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
+                email.previousElementSibling.style.color = "green";
+                email.previousElementSibling.previousElementSibling.style.color = "green"
+            }
+            else{
+                email.previousElementSibling.innerText = "invalid email";
+                email.previousElementSibling.style.color = "red";
+            }
+        }
+        function validateUsername(){
+            if (usernameRegex.test(username.value)){
+                username.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
+                username.previousElementSibling.style.color = "green";
+                username.previousElementSibling.previousElementSibling.style.color = "green"
+            }
+            else{
+                username.previousElementSibling.innerText = "invalid username";
+                username.previousElementSibling.style.color = "red";
+            }
+        }
+        function validatePassword(){
+            if (passwordRegex.test(password.value) ){
+                password.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
+                password.previousElementSibling.style.color = "green";
+                password.previousElementSibling.previousElementSibling.style.color = "green"
+            }
+            else{
+                password.previousElementSibling.innerText = "invalid password";
+                password.previousElementSibling.style.color = "red";
+            }
+        }
+        function validateRepassword(){
+            if (rePassword.value.match(password.value)){
+                rePassword.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
+                rePassword.previousElementSibling.style.color = "green";
+                rePassword.previousElementSibling.previousElementSibling.style.color = "green"
+            }
+            else{
+                rePassword.previousElementSibling.innerText = "Password doesn't match";
+                rePassword.previousElementSibling.style.color = "red";
+            }
+        }
+        function validateBirthday() {
+            // var birthday = document.getElementById("birthday").value; // Assuming the input element has an id="birthday"
+            // var birthdayRegex = /^\d{4}-\d{2}-\d{2}$/;
+
+            // Validate format using regex
+            if (!birthdayRegex.test(birthday.value)) {
+                birthday.previousElementSibling.innerText = "Invalid date format";
+                birthday.previousElementSibling.style.color = "red";
+            } else {
+                var date = birthday.value.split("-");
+                var year = parseInt(date[0]);
+                var month = parseInt(date[1]) - 1; // JavaScript months are 0-indexed
+                var day = parseInt(date[2]);
+                
+                var birthDate = new Date(year, month, day);
+
+                // Check if the constructed date is valid
+                if (birthDate.getFullYear() !== year || birthDate.getMonth() !== month || birthDate.getDate() !== day) {
+                    birthday.previousElementSibling.innerText = "Invalid date";
+                    birthday.previousElementSibling.style.color = "red";
+                    console.log(birthDate.getFullYear());
+                    console.log(birthDate.getMonth());
+                    console.log(birthDate.getDate());
+                } 
+                // Check if age is more than 18 years
+                else {
+                    var today = new Date();
+                    var age = today.getFullYear() - birthDate.getFullYear();
+                    var monthDiff = today.getMonth() - birthDate.getMonth();
+                    
+                    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                        age--;
+                    }
+
+                    if (age < 18) {
+                        birthday.previousElementSibling.innerText = "You must be at least 18 years old";
+                        birthday.previousElementSibling.style.color = "red";
+                    } else {
+                        // If valid, clear any previous error messages
+                        birthday.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
+                        birthday.previousElementSibling.style.color = "green";
+                        birthday.previousElementSibling.previousElementSibling.style.color = "green"
+                    }
+                }
+            }
+        }
+
+
+    </script>
 </body>
 </html>
