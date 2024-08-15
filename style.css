@@ -17,13 +17,16 @@
     /* height:42em; */
     width:33%;
 }
-.button{
+button{
     border: none;
     background-color: #fc4c4c;
     color: white;
 }
-.button:hover{
+button:hover{
     background-color: black;
+}
+a{
+    color: white;
 }
 @media (max-width: 768px){
     .form-div{
