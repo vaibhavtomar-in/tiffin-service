@@ -14,15 +14,15 @@
     background-color: #fc4c4c;
 }
 .form-div{
-    height:42em;
+    /* height:42em; */
     width:33%;
 }
-button{
+.button{
     border: none;
     background-color: #fc4c4c;
     color: white;
 }
-button:hover{
+.button:hover{
     background-color: black;
 }
 @media (max-width: 768px){

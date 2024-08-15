@@ -26,8 +26,8 @@
 <body>
     <div class="outer vh-100 d-flex">
         <section class="login-section p-5 d-flex justify-content-center h-90 my-5 w-100 align-items-center">
-            <div class="form-div bg-light rounded-5 p-5">
-                <form action="" class="login-form">
+            <div class="form-div bg-light rounded-5 p-4">
+                <form action="" class="login-form" id="loginForm">
                     <div class="from-header d-flex justify-content-center">
                         <div class="svg-div">
                             <svg height = "5em" viewbox="-5,-2.5,10,13">
@@ -43,21 +43,21 @@
                         </div>
                     </div>
                     <div class="form-content">
-                        <label for="name" class="col-form-label">NAME </label> <span></span>
+                        <label for="name" class="col-form-label">NAME :</label> <span></span>
                         <input type="text" class="form-control" id="name" />
-                        <label for="email" class="col-form-label">EMAIL</label> <span></span>
+                        <label for="email" class="col-form-label">EMAIL :</label> <span></span>
                         <input type="text" class="form-control" id="email" />
-                        <label for="username" class="col-form-label">USERNAME</label> <span></span>
+                        <label for="username" class="col-form-label">USERNAME :</label> <span></span>
                         <input type="text" class="form-control" id="username" />
-                        <label for="password" class="col-form-label">PASSWORD</label> <span></span>
+                        <label for="password" class="col-form-label">PASSWORD :</label> <span></span>
                         <input type="password" class="form-control" id="password" />
-                        <label for="password" class="col-form-label">RE-ENTER PASSWORD</label> <span></span>
+                        <label for="password" class="col-form-label">RE-ENTER PASSWORD :</label> <span></span>
                         <input type="password" class="form-control" id="re-password" />
-                        <label for="birthday" class="col-form-label">Birthday:</label> <span></span>
+                        <label for="birthday" class="col-form-label">Birthday :</label> <span></span>
                         <input type="text" class="form-control" id="birthday" name="birthday" >
-                        <div class="buttons py-3">
-                            <button type="submit" class="login button rounded-3">LOGIN</button>
-                            <button type="submit" class="signin button rounded-3 mx-lg-2 my-sm-2 my-2">SIGN IN</button>
+                        <div class="buttons py-3">     
+                            <input type="submit" value="Log in" class="button login button rounded-3 p-1" id="login">
+                            <input type="submit" value="Sign in" class="button signin button rounded-3 mx-lg-2 my-sm-2 my-2 p-1" id="signin">
                         </div>
                     </div>
                 </form>
@@ -70,7 +70,7 @@
         let username = document.getElementById("username");
         let password = document.getElementById("password");
         let rePassword = document.getElementById("re-password");
-        let birthday = document.getElementById("birthday");
+        let birthday = document.getElementById("birthday");        
         const nameRegex = /^[a-zA-Z\s'-]+$/;
         const emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}$/;
         const usernameRegex = /^[a-zA-Z0-9.-_]+$/;
@@ -87,11 +87,14 @@
             if (nameRegex.test(name.value)){
                 name.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
                 name.previousElementSibling.style.color = "green";
-                name.previousElementSibling.previousElementSibling.style.color = "green"
+                name.previousElementSibling.previousElementSibling.style.color = "green";
+                name.setAttribute("class", "form-control border border-success border-2");
             }
             else{
-                name.previousElementSibling.innerText = "invalid name";
+                name.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-xmark\"></i> invalid name";
                 name.previousElementSibling.style.color = "red";
+                name.previousElementSibling.previousElementSibling.style.color = "red";
+                name.setAttribute("class", "form-control border border-warning border-2");
             }
         }
         function validateEmail(){
@@ -99,10 +102,13 @@
                 email.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
                 email.previousElementSibling.style.color = "green";
                 email.previousElementSibling.previousElementSibling.style.color = "green"
+                email.setAttribute("class", "form-control border border-success border-2");
             }
             else{
-                email.previousElementSibling.innerText = "invalid email";
+                email.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-xmark\"></i> invalid email";
                 email.previousElementSibling.style.color = "red";
+                email.previousElementSibling.previousElementSibling.style.color = "red"
+                email.setAttribute("class", "form-control border border-warning border-2");
             }
         }
         function validateUsername(){
@@ -110,10 +116,13 @@
                 username.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
                 username.previousElementSibling.style.color = "green";
                 username.previousElementSibling.previousElementSibling.style.color = "green"
+                username.setAttribute("class", "form-control border border-success border-2");
             }
             else{
-                username.previousElementSibling.innerText = "invalid username";
+                username.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-xmark\"></i> invalid username";
                 username.previousElementSibling.style.color = "red";
+                username.previousElementSibling.previousElementSibling.style.color = "red"
+                username.setAttribute("class", "form-control border border-warning border-2");
             }
         }
         function validatePassword(){
@@ -121,10 +130,13 @@
                 password.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
                 password.previousElementSibling.style.color = "green";
                 password.previousElementSibling.previousElementSibling.style.color = "green"
+                password.setAttribute("class", "form-control border border-success border-2");
             }
             else{
-                password.previousElementSibling.innerText = "invalid password";
+                password.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-xmark\"></i> weak password";
                 password.previousElementSibling.style.color = "red";
+                password.previousElementSibling.previousElementSibling.style.color = "red"
+                password.setAttribute("class", "form-control border border-warning border-2");
             }
         }
         function validateRepassword(){
@@ -132,10 +144,13 @@
                 rePassword.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
                 rePassword.previousElementSibling.style.color = "green";
                 rePassword.previousElementSibling.previousElementSibling.style.color = "green"
+                rePassword.setAttribute("class", "form-control border border-success border-2");
             }
             else{
-                rePassword.previousElementSibling.innerText = "Password doesn't match";
+                rePassword.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-xmark\"></i> password doesn't match";
                 rePassword.previousElementSibling.style.color = "red";
+                rePassword.previousElementSibling.previousElementSibling.style.color = "red"
+                rePassword.setAttribute("class", "form-control border border-warning border-2");
             }
         }
         function validateBirthday() {
@@ -144,8 +159,10 @@
 
             // Validate format using regex
             if (!birthdayRegex.test(birthday.value)) {
-                birthday.previousElementSibling.innerText = "Invalid date format";
+                birthday.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-xmark\"></i> Invalid date format";
                 birthday.previousElementSibling.style.color = "red";
+                birthday.previousElementSibling.previousElementSibling.style.color = "red"
+                birthday.setAttribute("class", "form-control border border-warning border-2");
             } else {
                 var date = birthday.value.split("-");
                 var year = parseInt(date[0]);
@@ -156,8 +173,10 @@
 
                 // Check if the constructed date is valid
                 if (birthDate.getFullYear() !== year || birthDate.getMonth() !== month || birthDate.getDate() !== day) {
-                    birthday.previousElementSibling.innerText = "Invalid date";
+                    birthday.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-xmark\"></i> Invalid date";
                     birthday.previousElementSibling.style.color = "red";
+                    birthday.previousElementSibling.previousElementSibling.style.color = "red"
+                    birthday.setAttribute("class", "form-control border border-warning border-2");
                     console.log(birthDate.getFullYear());
                     console.log(birthDate.getMonth());
                     console.log(birthDate.getDate());
@@ -173,13 +192,16 @@
                     }
 
                     if (age < 18) {
-                        birthday.previousElementSibling.innerText = "You must be at least 18 years old";
+                        birthday.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-xmark\"></i> Age less than 18";
                         birthday.previousElementSibling.style.color = "red";
+                        birthday.previousElementSibling.previousElementSibling.style.color = "red"
+                        birthday.setAttribute("class", "form-control border border-warning border-2");
                     } else {
                         // If valid, clear any previous error messages
                         birthday.previousElementSibling.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
                         birthday.previousElementSibling.style.color = "green";
                         birthday.previousElementSibling.previousElementSibling.style.color = "green"
+                        birthday.setAttribute("class", "form-control border border-success border-2");
                     }
                 }
             }
